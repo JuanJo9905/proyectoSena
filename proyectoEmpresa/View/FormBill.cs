@@ -21,7 +21,38 @@ namespace proyectoEmpresa.View
 
         private void FormBill_Load(object sender, EventArgs e)
         {
-            totBill = Convert.ToDouble(lbTotAll.Text);
+
+            loadDgvBill();
+            loadDgvDet();
+
+        }
+        private void loadDgvBill()
+        {
+           // totBill = Convert.ToDouble(lbTotAll.Text);
+            idBill = lbIdBill.Text;
+
+            string query = "SELECT * FROM factura WHERE Numero = '" + idBill + "'";
+
+            MySqlConnection conexion = new MySqlConnection("server=127.0.0.1; user=root; password=; database = datos_proyecto");
+            MySqlCommand comando = new MySqlCommand(query, conexion);
+            comando.CommandTimeout = 60;
+            try
+            {
+                conexion.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(query, conexion);
+                DataSet data = new DataSet();
+                adaptador.Fill(data, "factura");
+                dgvBill.DataSource = data;
+                dgvBill.DataMember = "factura";
+            }
+            catch (MySqlException r)
+            {
+                MessageBox.Show(r.Message);
+            }
+        }
+        private void loadDgvDet()
+        {
+           // totBill = Convert.ToDouble(lbTotAll.Text);
             idBill = lbIdBill.Text;
 
             string query = "SELECT * FROM compras WHERE IdFactura = '" + idBill + "'";
@@ -42,6 +73,9 @@ namespace proyectoEmpresa.View
             {
                 MessageBox.Show(r.Message);
             }
+        }
+        private void dgvBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

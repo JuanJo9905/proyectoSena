@@ -26,7 +26,12 @@ namespace proyectoEmpresa.Controller
             string resp = billDB.fillDetails(query);
             return resp;
         }
-
+        public string sendBill(string idDet, string date, double totBill, int idCli, int amProd)
+        {
+            string query = "INSERT INTO `factura`(`Numero`, `Fecha`, `TotalFactura`, `IdCliente`, `CantidadProductos`) VALUES ('" + idDet + "','" + date + "'," + totBill + "," + idCli + "," + amProd + ")";
+            string resp = billDB.fillDetails(query);
+            return resp;
+        }
 
 
 

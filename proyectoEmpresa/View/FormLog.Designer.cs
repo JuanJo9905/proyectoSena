@@ -38,6 +38,7 @@
             this.btRegisterClient = new System.Windows.Forms.Button();
             this.lbAdmin = new System.Windows.Forms.Label();
             this.lbClient = new System.Windows.Forms.Label();
+            this.lbIdUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbNickAdmin
@@ -47,6 +48,7 @@
             this.tbNickAdmin.Size = new System.Drawing.Size(100, 20);
             this.tbNickAdmin.TabIndex = 0;
             this.tbNickAdmin.Enter += new System.EventHandler(this.tbNickAdmin_Enter);
+            this.tbNickAdmin.Leave += new System.EventHandler(this.tbNickAdmin_Leave);
             // 
             // tbPassAdmin
             // 
@@ -127,17 +129,27 @@
             // lbClient
             // 
             this.lbClient.AutoSize = true;
-            this.lbClient.Location = new System.Drawing.Point(753, 1);
+            this.lbClient.Location = new System.Drawing.Point(740, 1);
             this.lbClient.Name = "lbClient";
             this.lbClient.Size = new System.Drawing.Size(13, 13);
             this.lbClient.TabIndex = 9;
             this.lbClient.Text = "1";
+            // 
+            // lbIdUser
+            // 
+            this.lbIdUser.AutoSize = true;
+            this.lbIdUser.Location = new System.Drawing.Point(760, 1);
+            this.lbIdUser.Name = "lbIdUser";
+            this.lbIdUser.Size = new System.Drawing.Size(15, 13);
+            this.lbIdUser.TabIndex = 10;
+            this.lbIdUser.Text = "id";
             // 
             // FormLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbIdUser);
             this.Controls.Add(this.lbClient);
             this.Controls.Add(this.lbAdmin);
             this.Controls.Add(this.btRegisterClient);
@@ -150,6 +162,7 @@
             this.Controls.Add(this.tbNickAdmin);
             this.Name = "FormLog";
             this.Text = "FormLog";
+            this.Load += new System.EventHandler(this.FormLog_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +180,6 @@
         private System.Windows.Forms.Button btRegisterClient;
         public System.Windows.Forms.Label lbAdmin;
         public System.Windows.Forms.Label lbClient;
+        private System.Windows.Forms.Label lbIdUser;
     }
 }

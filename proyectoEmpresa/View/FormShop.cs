@@ -18,7 +18,8 @@ namespace proyectoEmpresa.View
 {
     public partial class FormShop : Form
     {
-        int chk, am, prc, name; string idBill; double totAll = 0;
+        DateTime date = DateTime.Now;
+        int chk, am, prc, name, amountProducts=0 ; string idDetails ; double totAll = 0;
         public FormShop()
         {
             InitializeComponent();
@@ -56,6 +57,7 @@ namespace proyectoEmpresa.View
         private void FormShop_Load(object sender, EventArgs e)
         {
             createIdDetails();
+            lbDate.Text = "" + date;
             try
             {
                 string consulta = "SELECT distinct Categoria FROM productos";
@@ -92,8 +94,8 @@ namespace proyectoEmpresa.View
             //Ciclo que hace la magia de generar ids aleatorios hasta que el espacio esté disponible (true)
             do
              {
-              idBill =Convert.ToString( rand.Next(1, 1000));
-              available = searchId(idBill);
+              idDetails =Convert.ToString( rand.Next(1, 1000));
+              available = searchId(idDetails);
              } while(available == "false");
           
         }
@@ -253,10 +255,11 @@ namespace proyectoEmpresa.View
                            {
                              updateStock(nameProd, newStock);
                              price = Convert.ToDouble(dgvProducts.Rows[i].Cells[prc].Value);
+                             amountProducts += amount;
                              totRow = amount * price;
                              tot += totRow;
                              idProduct = searchIdByName(nameProd);
-                             sendInfoToDetails(idBill, idProduct,amount,totRow);
+                             sendInfoToDetails(idDetails, idProduct,amount,totRow);
                            }
                           else
                            {
@@ -277,10 +280,22 @@ namespace proyectoEmpresa.View
 
         private void btFact_Click(object sender, EventArgs e)
         {
+            int user = Convert.ToInt32(lbIdUser.Text);
+            createBill(idDetails, lbDate.Text, totAll, user , amountProducts );
             FormBill formBill = new FormBill();
             formBill.lbTotAll.Text = lbTotFact.Text;
-            formBill.lbIdBill.Text = idBill;
+            formBill.lbIdBill.Text = idDetails;
+            formBill.lbIdClient.Text = lbIdUser.Text;
             formBill.Show();
+        }
+
+        /*
+         * @JuanJo Método que creara la factura
+         */
+         private void createBill(string idDet, string date, double totBill, int idCli, int amountProd )
+        {
+            BillController bController = new BillController();
+            bController.sendBill(idDet, date, totBill, idCli, amountProd);
         }
 
         /*

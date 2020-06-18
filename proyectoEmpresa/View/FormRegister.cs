@@ -21,7 +21,7 @@ namespace proyectoEmpresa
 
         private void Btn_registrar_Click(object sender, EventArgs e)
         {
-            if (txt_surname.Text == "" || Txt_name.Text == "" || Txt_direc.Text == "" || Txt_Tell.Text == "" || Txt_documents.Text == "" || Txt_typedocuments.Text == "" ||
+            if (txt_surname.Text == "" || Txt_name.Text == "" || Txt_direc.Text == "" || Txt_Tell.Text == "" || Txt_documents.Text == "" || cbTipeDoc.Text == "" ||
                 Txt_correo.Text == "" || Txt_pass.Text == "" || Txt_2pass.Text == "")
             {
                 MessageBox.Show("verificar informacion espacios vacios");
@@ -33,7 +33,7 @@ namespace proyectoEmpresa
                 if (Txt_pass.Text == Txt_2pass.Text)
                 {
                     string respuesta = escontroler.guadarDatos(Txt_name.Text, txt_surname.Text, Txt_direc.Text, Txt_Tell.Text, Txt_documents.Text,
-                        Txt_typedocuments.Text, Txt_correo.Text, Txt_pass.Text, lbUser.Text);
+                        cbTipeDoc.Text, Txt_correo.Text, Txt_pass.Text, lbUser.Text);
                     MessageBox.Show(respuesta);
                 }
                 else

@@ -31,7 +31,6 @@
             this.Txt_2pass = new System.Windows.Forms.TextBox();
             this.Txt_pass = new System.Windows.Forms.TextBox();
             this.Txt_correo = new System.Windows.Forms.TextBox();
-            this.Txt_typedocuments = new System.Windows.Forms.TextBox();
             this.Txt_documents = new System.Windows.Forms.TextBox();
             this.Txt_Tell = new System.Windows.Forms.TextBox();
             this.Txt_direc = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lbUser = new System.Windows.Forms.Label();
+            this.cbTipeDoc = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Txt_2pass
@@ -70,13 +70,6 @@
             this.Txt_correo.Name = "Txt_correo";
             this.Txt_correo.Size = new System.Drawing.Size(100, 20);
             this.Txt_correo.TabIndex = 18;
-            // 
-            // Txt_typedocuments
-            // 
-            this.Txt_typedocuments.Location = new System.Drawing.Point(484, 126);
-            this.Txt_typedocuments.Name = "Txt_typedocuments";
-            this.Txt_typedocuments.Size = new System.Drawing.Size(100, 20);
-            this.Txt_typedocuments.TabIndex = 17;
             // 
             // Txt_documents
             // 
@@ -216,11 +209,23 @@
             this.lbUser.Text = "label9";
             this.lbUser.Visible = false;
             // 
+            // cbTipeDoc
+            // 
+            this.cbTipeDoc.FormattingEnabled = true;
+            this.cbTipeDoc.Items.AddRange(new object[] {
+            "CC",
+            "TI"});
+            this.cbTipeDoc.Location = new System.Drawing.Point(484, 126);
+            this.cbTipeDoc.Name = "cbTipeDoc";
+            this.cbTipeDoc.Size = new System.Drawing.Size(100, 21);
+            this.cbTipeDoc.TabIndex = 32;
+            // 
             // FormRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbTipeDoc);
             this.Controls.Add(this.lbUser);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
@@ -234,7 +239,6 @@
             this.Controls.Add(this.Txt_2pass);
             this.Controls.Add(this.Txt_pass);
             this.Controls.Add(this.Txt_correo);
-            this.Controls.Add(this.Txt_typedocuments);
             this.Controls.Add(this.Txt_documents);
             this.Controls.Add(this.Txt_Tell);
             this.Controls.Add(this.Txt_direc);
@@ -253,7 +257,6 @@
     private System.Windows.Forms.TextBox Txt_2pass;
     private System.Windows.Forms.TextBox Txt_pass;
     private System.Windows.Forms.TextBox Txt_correo;
-    private System.Windows.Forms.TextBox Txt_typedocuments;
     private System.Windows.Forms.TextBox Txt_documents;
     private System.Windows.Forms.TextBox Txt_Tell;
     private System.Windows.Forms.TextBox Txt_direc;
@@ -270,5 +273,6 @@
     private System.Windows.Forms.Label label8;
     private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label lbUser;
+        private System.Windows.Forms.ComboBox cbTipeDoc;
     }
 }

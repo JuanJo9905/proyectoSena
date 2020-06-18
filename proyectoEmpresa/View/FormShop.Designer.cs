@@ -38,6 +38,8 @@
             this.btAddToCar = new System.Windows.Forms.Button();
             this.btFact = new System.Windows.Forms.Button();
             this.lbTotFact = new System.Windows.Forms.Label();
+            this.lbIdUser = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,11 +135,31 @@
             this.lbTotFact.TabIndex = 29;
             this.lbTotFact.Text = "Total Factura";
             // 
+            // lbIdUser
+            // 
+            this.lbIdUser.AutoSize = true;
+            this.lbIdUser.Location = new System.Drawing.Point(3, 2);
+            this.lbIdUser.Name = "lbIdUser";
+            this.lbIdUser.Size = new System.Drawing.Size(13, 13);
+            this.lbIdUser.TabIndex = 30;
+            this.lbIdUser.Text = "0";
+            // 
+            // lbDate
+            // 
+            this.lbDate.AutoSize = true;
+            this.lbDate.Location = new System.Drawing.Point(72, 2);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(37, 13);
+            this.lbDate.TabIndex = 31;
+            this.lbDate.Text = "Fecha";
+            // 
             // FormShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbDate);
+            this.Controls.Add(this.lbIdUser);
             this.Controls.Add(this.lbTotFact);
             this.Controls.Add(this.btFact);
             this.Controls.Add(this.btAddToCar);
@@ -169,5 +191,7 @@
         private System.Windows.Forms.Button btAddToCar;
         private System.Windows.Forms.Button btFact;
         public System.Windows.Forms.Label lbTotFact;
+        public System.Windows.Forms.Label lbIdUser;
+        private System.Windows.Forms.Label lbDate;
     }
 }

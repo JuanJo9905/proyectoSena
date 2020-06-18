@@ -26,7 +26,8 @@ namespace proyectoEmpresa
 
         private void btAddProduct_Click(object sender, EventArgs e)
         {
-
+            FormAddProduct formAddProduct = new FormAddProduct();
+            formAddProduct.Show();
         }
 
         private void btStock_Click(object sender, EventArgs e)

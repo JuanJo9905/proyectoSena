@@ -31,14 +31,14 @@ namespace proyectoEmpresa.View
             MySqlDataReader leer = codigo.ExecuteReader();
             if (leer.Read())
             {
-                MessageBox.Show("bienvenido");
+                MessageBox.Show("Bienvenido " + tbNickUser.Text);
                 FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
                 formMenuAdmin.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("error");
+                MessageBox.Show("Usuario o contraseña incorrectos");
             }
             conectaradmin.Close();
 
@@ -59,21 +59,45 @@ namespace proyectoEmpresa.View
             MySqlDataReader leer = codigo.ExecuteReader();
             if (leer.Read())
             {
-                MessageBox.Show("bienvenido");
-                Form register = new FormShop();
-                register.Show();
+                MessageBox.Show("Bienvenido " + tbNickUser.Text);
+                int id = searchIdByName(tbNickUser.Text);
+                FormShop shop = new FormShop();
+                shop.lbIdUser.Text = "" + id;
+                shop.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("error");
+                MessageBox.Show("Usuario o contraseña incorrectos");
             }
             conectaruser.Close();
         }
 
+        private int searchIdByName(string name)
+        {
+            string query = "select ID from clientes where Nombre = '" + name + "'";
+            int id;
+
+
+            MySqlConnection connection = new MySqlConnection("server=127.0.0.1; user=root; password=; database = datos_proyecto");
+            MySqlCommand comand = new MySqlCommand(query, connection);
+            comand.CommandTimeout = 60;
+            try
+            {
+                connection.Open();
+                id = (Int32)comand.ExecuteScalar();
+
+            }
+            catch (MySqlException r)
+            {
+                MessageBox.Show(r.Message);
+                id = 0;
+            }
+            return (Int32)id;
+        }
         private void tbNickAdmin_Enter(object sender, EventArgs e)
         {
-            if (tbNickAdmin.Text == "Usuario administrador")
+            if (tbNickAdmin.Text == "Administrador")
             {
                 tbNickAdmin.Text = "";
                 tbNickAdmin.ForeColor = Color.Black;
@@ -151,6 +175,23 @@ namespace proyectoEmpresa.View
             FormRegister register = new FormRegister();
             register.lbUser.Text = lbClient.Text;
             register.Show();
+        }
+
+        private void FormLog_Load(object sender, EventArgs e)
+        {
+            tbPassUser_Leave(sender,e);
+            tbPassAdmin_Leave(sender, e);
+            tbNickUser_Leave(sender, e);
+            tbNickAdmin_Leave(sender, e);
+        }
+
+        private void tbNickAdmin_Leave(object sender, EventArgs e)
+        {
+            if (tbNickUser.Text == "")
+            {
+                tbNickUser.Text = "Admin";
+                tbNickUser.ForeColor = Color.Red;
+            }
         }
     }
 }

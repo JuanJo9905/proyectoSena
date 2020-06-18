@@ -31,7 +31,10 @@
             this.lbTotAll = new System.Windows.Forms.Label();
             this.lbIdBill = new System.Windows.Forms.Label();
             this.dgvDetails = new System.Windows.Forms.DataGridView();
+            this.lbIdClient = new System.Windows.Forms.Label();
+            this.dgvBill = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTotAll
@@ -55,16 +58,36 @@
             // dgvDetails
             // 
             this.dgvDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetails.Location = new System.Drawing.Point(12, 118);
+            this.dgvDetails.Location = new System.Drawing.Point(87, 169);
             this.dgvDetails.Name = "dgvDetails";
-            this.dgvDetails.Size = new System.Drawing.Size(776, 150);
+            this.dgvDetails.Size = new System.Drawing.Size(546, 150);
             this.dgvDetails.TabIndex = 3;
+            // 
+            // lbIdClient
+            // 
+            this.lbIdClient.AutoSize = true;
+            this.lbIdClient.Location = new System.Drawing.Point(101, 436);
+            this.lbIdClient.Name = "lbIdClient";
+            this.lbIdClient.Size = new System.Drawing.Size(41, 13);
+            this.lbIdClient.TabIndex = 4;
+            this.lbIdClient.Text = "idClient";
+            // 
+            // dgvBill
+            // 
+            this.dgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBill.Location = new System.Drawing.Point(87, 75);
+            this.dgvBill.Name = "dgvBill";
+            this.dgvBill.Size = new System.Drawing.Size(648, 88);
+            this.dgvBill.TabIndex = 5;
+            this.dgvBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_CellContentClick);
             // 
             // FormBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvBill);
+            this.Controls.Add(this.lbIdClient);
             this.Controls.Add(this.dgvDetails);
             this.Controls.Add(this.lbIdBill);
             this.Controls.Add(this.lbTotAll);
@@ -72,6 +95,7 @@
             this.Text = "FormBill";
             this.Load += new System.EventHandler(this.FormBill_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,5 +105,7 @@
         public System.Windows.Forms.Label lbTotAll;
         public System.Windows.Forms.Label lbIdBill;
         private System.Windows.Forms.DataGridView dgvDetails;
+        public System.Windows.Forms.Label lbIdClient;
+        private System.Windows.Forms.DataGridView dgvBill;
     }
 }
