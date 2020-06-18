@@ -255,5 +255,20 @@ namespace proyectoEmpresa
             tbChangeDesc.Text = null;
             tbChangePrice.Text = null;
         }
+
+        private void btHideMenu_Click(object sender, EventArgs e)
+        {
+            int wd = gbMenChan.Width;
+            if(wd > 232)
+            {
+                gbMenChan.Width = 0;
+                btHideMenu.Location = new Point(0,1); 
+            }
+            else
+            {
+                gbMenChan.Width = 233;
+                btHideMenu.Location = new Point(234, 1);
+            }
+        }
     }
 }

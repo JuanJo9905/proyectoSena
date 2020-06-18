@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChangeProducts));
             this.label1 = new System.Windows.Forms.Label();
             this.cbSelectCategory = new System.Windows.Forms.ComboBox();
             this.tbSearchProduct = new System.Windows.Forms.TextBox();
             this.gbChanges = new System.Windows.Forms.GroupBox();
+            this.btCancelMod = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,41 +51,52 @@
             this.btShowProducts = new System.Windows.Forms.Button();
             this.btSearchProduct = new System.Windows.Forms.Button();
             this.btReturn = new System.Windows.Forms.Button();
-            this.btCancelMod = new System.Windows.Forms.Button();
             this.eProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gbMenChan = new System.Windows.Forms.GroupBox();
+            this.btHideMenu = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.gbChanges.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eProvider)).BeginInit();
+            this.gbMenChan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 44);
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(56, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(111, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Categorias";
             // 
             // cbSelectCategory
             // 
+            this.cbSelectCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSelectCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSelectCategory.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSelectCategory.FormattingEnabled = true;
-            this.cbSelectCategory.Location = new System.Drawing.Point(50, 146);
+            this.cbSelectCategory.Location = new System.Drawing.Point(49, 142);
             this.cbSelectCategory.Name = "cbSelectCategory";
-            this.cbSelectCategory.Size = new System.Drawing.Size(114, 21);
+            this.cbSelectCategory.Size = new System.Drawing.Size(114, 26);
             this.cbSelectCategory.TabIndex = 1;
             // 
             // tbSearchProduct
             // 
-            this.tbSearchProduct.Location = new System.Drawing.Point(64, 78);
+            this.tbSearchProduct.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearchProduct.Location = new System.Drawing.Point(49, 59);
             this.tbSearchProduct.Name = "tbSearchProduct";
-            this.tbSearchProduct.Size = new System.Drawing.Size(100, 20);
+            this.tbSearchProduct.Size = new System.Drawing.Size(118, 25);
             this.tbSearchProduct.TabIndex = 2;
             this.tbSearchProduct.Text = "Buscar Producto";
             // 
             // gbChanges
             // 
+            this.gbChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.gbChanges.Controls.Add(this.btCancelMod);
             this.gbChanges.Controls.Add(this.btSave);
             this.gbChanges.Controls.Add(this.label3);
@@ -94,19 +107,33 @@
             this.gbChanges.Controls.Add(this.label4);
             this.gbChanges.Controls.Add(this.tbChangePrice);
             this.gbChanges.Controls.Add(this.tbChangeNam);
-            this.gbChanges.Location = new System.Drawing.Point(12, 260);
+            this.gbChanges.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbChanges.Location = new System.Drawing.Point(11, 261);
             this.gbChanges.Name = "gbChanges";
-            this.gbChanges.Size = new System.Drawing.Size(192, 188);
+            this.gbChanges.Size = new System.Drawing.Size(220, 183);
             this.gbChanges.TabIndex = 4;
             this.gbChanges.TabStop = false;
             this.gbChanges.Text = "Cambios";
             this.gbChanges.Visible = false;
             // 
+            // btCancelMod
+            // 
+            this.btCancelMod.AutoSize = true;
+            this.btCancelMod.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btCancelMod.Location = new System.Drawing.Point(20, 145);
+            this.btCancelMod.Name = "btCancelMod";
+            this.btCancelMod.Size = new System.Drawing.Size(73, 28);
+            this.btCancelMod.TabIndex = 11;
+            this.btCancelMod.Text = "Cancelar";
+            this.btCancelMod.UseVisualStyleBackColor = true;
+            this.btCancelMod.Click += new System.EventHandler(this.btCancelMod_Click);
+            // 
             // btSave
             // 
-            this.btSave.Location = new System.Drawing.Point(101, 141);
+            this.btSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSave.Location = new System.Drawing.Point(134, 144);
             this.btSave.Name = "btSave";
-            this.btSave.Size = new System.Drawing.Size(75, 23);
+            this.btSave.Size = new System.Drawing.Size(80, 29);
             this.btSave.TabIndex = 10;
             this.btSave.Text = "Guardar";
             this.btSave.UseVisualStyleBackColor = true;
@@ -117,7 +144,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(64, 18);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nombre:";
             // 
@@ -126,7 +153,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 91);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.Size = new System.Drawing.Size(74, 18);
             this.label5.TabIndex = 8;
             this.label5.Text = "Categoria:";
             // 
@@ -135,22 +162,22 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(4, 118);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.Size = new System.Drawing.Size(89, 18);
             this.label6.TabIndex = 9;
             this.label6.Text = "Descripcion:";
             // 
             // tbChangeDesc
             // 
-            this.tbChangeDesc.Location = new System.Drawing.Point(76, 115);
+            this.tbChangeDesc.Location = new System.Drawing.Point(97, 115);
             this.tbChangeDesc.Name = "tbChangeDesc";
-            this.tbChangeDesc.Size = new System.Drawing.Size(100, 20);
+            this.tbChangeDesc.Size = new System.Drawing.Size(100, 25);
             this.tbChangeDesc.TabIndex = 3;
             // 
             // tbChangeCat
             // 
-            this.tbChangeCat.Location = new System.Drawing.Point(76, 88);
+            this.tbChangeCat.Location = new System.Drawing.Point(97, 88);
             this.tbChangeCat.Name = "tbChangeCat";
-            this.tbChangeCat.Size = new System.Drawing.Size(100, 20);
+            this.tbChangeCat.Size = new System.Drawing.Size(100, 25);
             this.tbChangeCat.TabIndex = 2;
             // 
             // label4
@@ -158,62 +185,72 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 64);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(53, 18);
             this.label4.TabIndex = 7;
             this.label4.Text = "Precio:";
             // 
             // tbChangePrice
             // 
-            this.tbChangePrice.Location = new System.Drawing.Point(76, 61);
+            this.tbChangePrice.Location = new System.Drawing.Point(97, 61);
             this.tbChangePrice.Name = "tbChangePrice";
-            this.tbChangePrice.Size = new System.Drawing.Size(100, 20);
+            this.tbChangePrice.Size = new System.Drawing.Size(100, 25);
             this.tbChangePrice.TabIndex = 1;
             // 
             // tbChangeNam
             // 
-            this.tbChangeNam.Location = new System.Drawing.Point(76, 34);
+            this.tbChangeNam.Location = new System.Drawing.Point(97, 34);
             this.tbChangeNam.Name = "tbChangeNam";
-            this.tbChangeNam.Size = new System.Drawing.Size(100, 20);
+            this.tbChangeNam.Size = new System.Drawing.Size(100, 25);
             this.tbChangeNam.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 218);
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 209);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(73, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Modificar";
             // 
             // tbFindId
             // 
-            this.tbFindId.Location = new System.Drawing.Point(12, 234);
+            this.tbFindId.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFindId.Location = new System.Drawing.Point(11, 230);
             this.tbFindId.Name = "tbFindId";
-            this.tbFindId.Size = new System.Drawing.Size(100, 20);
+            this.tbFindId.Size = new System.Drawing.Size(100, 25);
             this.tbFindId.TabIndex = 6;
+            this.tbFindId.Text = "ID";
             // 
             // btSendId
             // 
-            this.btSendId.Location = new System.Drawing.Point(118, 234);
+            this.btSendId.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSendId.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSendId.Location = new System.Drawing.Point(117, 230);
             this.btSendId.Name = "btSendId";
             this.btSendId.Size = new System.Drawing.Size(75, 23);
             this.btSendId.TabIndex = 7;
-            this.btSendId.Text = "Enviar";
+            this.btSendId.Text = "Buscar";
             this.btSendId.UseVisualStyleBackColor = true;
             this.btSendId.Click += new System.EventHandler(this.btSendId_Click);
             // 
             // dgvProducts
             // 
+            this.dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProducts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProducts.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(168)))), ((int)(((byte)(154)))));
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.Location = new System.Drawing.Point(199, 23);
+            this.dgvProducts.Location = new System.Drawing.Point(234, 41);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.ReadOnly = true;
-            this.dgvProducts.Size = new System.Drawing.Size(578, 368);
+            this.dgvProducts.Size = new System.Drawing.Size(566, 368);
             this.dgvProducts.TabIndex = 9;
             // 
             // btShowProducts
             // 
-            this.btShowProducts.Location = new System.Drawing.Point(48, 174);
+            this.btShowProducts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btShowProducts.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btShowProducts.Location = new System.Drawing.Point(47, 170);
             this.btShowProducts.Name = "btShowProducts";
             this.btShowProducts.Size = new System.Drawing.Size(116, 23);
             this.btShowProducts.TabIndex = 10;
@@ -223,9 +260,11 @@
             // 
             // btSearchProduct
             // 
-            this.btSearchProduct.Location = new System.Drawing.Point(73, 104);
+            this.btSearchProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSearchProduct.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearchProduct.Location = new System.Drawing.Point(71, 90);
             this.btSearchProduct.Name = "btSearchProduct";
-            this.btSearchProduct.Size = new System.Drawing.Size(75, 23);
+            this.btSearchProduct.Size = new System.Drawing.Size(75, 27);
             this.btSearchProduct.TabIndex = 11;
             this.btSearchProduct.Text = "Buscar";
             this.btSearchProduct.UseVisualStyleBackColor = true;
@@ -233,44 +272,95 @@
             // 
             // btReturn
             // 
-            this.btReturn.Location = new System.Drawing.Point(694, 400);
+            this.btReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(115)))), ((int)(((byte)(93)))));
+            this.btReturn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btReturn.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReturn.Location = new System.Drawing.Point(713, 409);
             this.btReturn.Name = "btReturn";
-            this.btReturn.Size = new System.Drawing.Size(75, 23);
+            this.btReturn.Size = new System.Drawing.Size(86, 35);
             this.btReturn.TabIndex = 12;
             this.btReturn.Text = "Menú";
-            this.btReturn.UseVisualStyleBackColor = true;
+            this.btReturn.UseVisualStyleBackColor = false;
             this.btReturn.Click += new System.EventHandler(this.btReturn_Click);
-            // 
-            // btCancelMod
-            // 
-            this.btCancelMod.Location = new System.Drawing.Point(6, 142);
-            this.btCancelMod.Name = "btCancelMod";
-            this.btCancelMod.Size = new System.Drawing.Size(70, 22);
-            this.btCancelMod.TabIndex = 11;
-            this.btCancelMod.Text = "Cancelar";
-            this.btCancelMod.UseVisualStyleBackColor = true;
-            this.btCancelMod.Click += new System.EventHandler(this.btCancelMod_Click);
             // 
             // eProvider
             // 
             this.eProvider.ContainerControl = this;
+            // 
+            // gbMenChan
+            // 
+            this.gbMenChan.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.gbMenChan.Controls.Add(this.label1);
+            this.gbMenChan.Controls.Add(this.btSearchProduct);
+            this.gbMenChan.Controls.Add(this.btShowProducts);
+            this.gbMenChan.Controls.Add(this.gbChanges);
+            this.gbMenChan.Controls.Add(this.btSendId);
+            this.gbMenChan.Controls.Add(this.tbFindId);
+            this.gbMenChan.Controls.Add(this.label2);
+            this.gbMenChan.Controls.Add(this.tbSearchProduct);
+            this.gbMenChan.Controls.Add(this.cbSelectCategory);
+            this.gbMenChan.Controls.Add(this.label7);
+            this.gbMenChan.Location = new System.Drawing.Point(3, 1);
+            this.gbMenChan.Name = "gbMenChan";
+            this.gbMenChan.Size = new System.Drawing.Size(232, 443);
+            this.gbMenChan.TabIndex = 15;
+            this.gbMenChan.TabStop = false;
+            // 
+            // btHideMenu
+            // 
+            this.btHideMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHideMenu.BackgroundImage")));
+            this.btHideMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btHideMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btHideMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHideMenu.Location = new System.Drawing.Point(234, 1);
+            this.btHideMenu.Name = "btHideMenu";
+            this.btHideMenu.Size = new System.Drawing.Size(46, 45);
+            this.btHideMenu.TabIndex = 12;
+            this.btHideMenu.UseVisualStyleBackColor = true;
+            this.btHideMenu.Click += new System.EventHandler(this.btHideMenu_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(2, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(797, 441);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label7.Location = new System.Drawing.Point(0, 2);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(233, 43);
+            this.label7.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(115)))), ((int)(((byte)(93)))));
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(234, 1);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(565, 45);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Cambios";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormChangeProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btHideMenu);
+            this.Controls.Add(this.gbMenChan);
             this.Controls.Add(this.btReturn);
-            this.Controls.Add(this.btSearchProduct);
-            this.Controls.Add(this.btShowProducts);
             this.Controls.Add(this.dgvProducts);
-            this.Controls.Add(this.btSendId);
-            this.Controls.Add(this.tbFindId);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.gbChanges);
-            this.Controls.Add(this.tbSearchProduct);
-            this.Controls.Add(this.cbSelectCategory);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "FormChangeProducts";
             this.Text = "FormChangeProducts";
             this.Load += new System.EventHandler(this.FormChangeProducts_Load);
@@ -278,8 +368,10 @@
             this.gbChanges.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eProvider)).EndInit();
+            this.gbMenChan.ResumeLayout(false);
+            this.gbMenChan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -307,5 +399,10 @@
         private System.Windows.Forms.Button btReturn;
         private System.Windows.Forms.Button btCancelMod;
         private System.Windows.Forms.ErrorProvider eProvider;
+        private System.Windows.Forms.Button btHideMenu;
+        private System.Windows.Forms.GroupBox gbMenChan;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }

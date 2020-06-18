@@ -273,9 +273,6 @@ namespace proyectoEmpresa.View
             lbpruebaTotal.Text = "" + tot;
             lbTotFact.Text = "" + totAll;
 
-            
-
-
         }
 
         private void btFact_Click(object sender, EventArgs e)
@@ -289,10 +286,16 @@ namespace proyectoEmpresa.View
             formBill.Show();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTime.Text = DateTime.Now.ToLongTimeString();
+        }
+
+
         /*
          * @JuanJo Método que creara la factura
          */
-         private void createBill(string idDet, string date, double totBill, int idCli, int amountProd )
+        private void createBill(string idDet, string date, double totBill, int idCli, int amountProd )
         {
             BillController bController = new BillController();
             bController.sendBill(idDet, date, totBill, idCli, amountProd);

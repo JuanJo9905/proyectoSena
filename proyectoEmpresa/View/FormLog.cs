@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace proyectoEmpresa.View
+
 {
     public partial class FormLog : Form
     {

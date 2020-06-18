@@ -44,6 +44,7 @@ namespace proyectoEmpresa.View
                 adaptador.Fill(data, "factura");
                 dgvBill.DataSource = data;
                 dgvBill.DataMember = "factura";
+                dgvBill.AllowUserToAddRows = false;
             }
             catch (MySqlException r)
             {
@@ -68,6 +69,7 @@ namespace proyectoEmpresa.View
                 adaptador.Fill(data, "compras");
                 dgvDetails.DataSource = data;
                 dgvDetails.DataMember = "compras";
+                dgvDetails.AllowUserToAddRows = false;
             }
             catch (MySqlException r)
             {
@@ -75,6 +77,11 @@ namespace proyectoEmpresa.View
             }
         }
         private void dgvBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

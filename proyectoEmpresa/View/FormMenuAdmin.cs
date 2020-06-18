@@ -35,5 +35,32 @@ namespace proyectoEmpresa
             FormStock formStock = new FormStock();
             formStock.Show();
         }
+
+        private void btChangeProducts_MouseHover(object sender, EventArgs e)
+        {
+            pbChange.Visible = true;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+        }
+
+        private void btAddProduct_MouseHover(object sender, EventArgs e)
+        {
+            pbChange.Visible = false;
+            pictureBox1.Visible = true;
+            pictureBox2.Visible = false;
+        }
+
+        private void btStock_MouseHover(object sender, EventArgs e)
+        {
+            pbChange.Visible = false;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = true;
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            FormLog formLog = new FormLog();
+            formLog.Show();
+        }
     }
 }
