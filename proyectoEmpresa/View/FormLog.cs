@@ -32,7 +32,7 @@ namespace proyectoEmpresa.View
             MySqlDataReader leer = codigo.ExecuteReader();
             if (leer.Read())
             {
-                MessageBox.Show("Bienvenido " + tbNickUser.Text);
+                MessageBox.Show("Bienvenido " + tbNickAdmin.Text);
                 FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
                 formMenuAdmin.Show();
                 this.Hide();

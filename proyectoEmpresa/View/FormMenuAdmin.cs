@@ -22,18 +22,22 @@ namespace proyectoEmpresa
         {
             FormChangeProducts formChangeProducts = new FormChangeProducts();
             formChangeProducts.Show();
+            this.Hide();
+        
         }
 
         private void btAddProduct_Click(object sender, EventArgs e)
         {
             FormAddProduct formAddProduct = new FormAddProduct();
             formAddProduct.Show();
+            this.Hide();
         }
 
         private void btStock_Click(object sender, EventArgs e)
         {
             FormStock formStock = new FormStock();
             formStock.Show();
+            this.Hide();
         }
 
         private void btChangeProducts_MouseHover(object sender, EventArgs e)

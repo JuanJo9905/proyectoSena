@@ -284,6 +284,7 @@ namespace proyectoEmpresa.View
             formBill.lbIdBill.Text = idDetails;
             formBill.lbIdClient.Text = lbIdUser.Text;
             formBill.Show();
+            this.Hide();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

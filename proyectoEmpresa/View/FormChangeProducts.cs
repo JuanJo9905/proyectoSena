@@ -240,6 +240,7 @@ namespace proyectoEmpresa
         {
             FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
             formMenuAdmin.Show();
+            this.Hide();
         }
         /*
          * @JuanJo En este método se programa la instruccion de cancelar la modificacion 
