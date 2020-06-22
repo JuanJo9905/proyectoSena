@@ -107,7 +107,7 @@
             this.btLogAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btLogAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLogAdmin.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogAdmin.Location = new System.Drawing.Point(113, 220);
+            this.btLogAdmin.Location = new System.Drawing.Point(99, 220);
             this.btLogAdmin.Name = "btLogAdmin";
             this.btLogAdmin.Size = new System.Drawing.Size(95, 29);
             this.btLogAdmin.TabIndex = 4;
@@ -122,7 +122,7 @@
             this.btRegisterAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btRegisterAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btRegisterAdmin.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRegisterAdmin.Location = new System.Drawing.Point(239, 220);
+            this.btRegisterAdmin.Location = new System.Drawing.Point(225, 220);
             this.btRegisterAdmin.Name = "btRegisterAdmin";
             this.btRegisterAdmin.Size = new System.Drawing.Size(93, 29);
             this.btRegisterAdmin.TabIndex = 5;

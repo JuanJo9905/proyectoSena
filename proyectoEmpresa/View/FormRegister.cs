@@ -64,5 +64,12 @@ namespace proyectoEmpresa
             register.Show();
             this.Close();
         }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            FormLog log = new FormLog();
+            log.Show();
+            this.Close();
+        }
     }
 }

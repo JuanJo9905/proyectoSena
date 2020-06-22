@@ -240,7 +240,7 @@ namespace proyectoEmpresa
         {
             FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
             formMenuAdmin.Show();
-            this.Hide();
+            this.Close();
         }
         /*
          * @JuanJo En este método se programa la instruccion de cancelar la modificacion 
@@ -269,6 +269,42 @@ namespace proyectoEmpresa
             {
                 gbMenChan.Width = 233;
                 btHideMenu.Location = new Point(234, 1);
+            }
+        }
+
+        private void tbSearchProduct_Enter(object sender, EventArgs e)
+        {
+            if (tbSearchProduct.Text == "Buscar producto")
+            {
+                tbSearchProduct.Text = "";
+                tbSearchProduct.ForeColor = Color.Black;
+            }
+        }
+
+        private void tbSearchProduct_Leave(object sender, EventArgs e)
+        {
+            if (tbSearchProduct.Text == "")
+            {
+                tbSearchProduct.Text = "Buscar Producto";
+                tbSearchProduct.ForeColor = Color.Black;
+            }
+        }
+
+        private void tbFindId_Leave(object sender, EventArgs e)
+        {
+            if (tbFindId.Text == "")
+            {
+                tbFindId.Text = "Buscar Producto";
+                tbFindId.ForeColor = Color.Black;
+            }
+        }
+
+        private void tbFindId_Enter(object sender, EventArgs e)
+        {
+            if (tbFindId.Text == "Buscar producto")
+            {
+                tbFindId.Text = "";
+                tbFindId.ForeColor = Color.Black;
             }
         }
     }

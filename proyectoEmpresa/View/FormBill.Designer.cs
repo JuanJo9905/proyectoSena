@@ -37,6 +37,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btExit = new System.Windows.Forms.Button();
+            this.btBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -127,11 +129,39 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
+            // btExit
+            // 
+            this.btExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(154)))), ((int)(((byte)(146)))));
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExit.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btExit.Location = new System.Drawing.Point(720, 408);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(68, 30);
+            this.btExit.TabIndex = 9;
+            this.btExit.Text = "Salir";
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
+            // 
+            // btBack
+            // 
+            this.btBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(154)))), ((int)(((byte)(146)))));
+            this.btBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBack.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBack.Location = new System.Drawing.Point(12, 403);
+            this.btBack.Name = "btBack";
+            this.btBack.Size = new System.Drawing.Size(130, 30);
+            this.btBack.TabIndex = 10;
+            this.btBack.Text = "Volver al carrito";
+            this.btBack.UseVisualStyleBackColor = false;
+            this.btBack.Click += new System.EventHandler(this.btBack_Click);
+            // 
             // FormBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btBack);
+            this.Controls.Add(this.btExit);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvBill);
@@ -161,5 +191,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btExit;
+        private System.Windows.Forms.Button btBack;
     }
 }

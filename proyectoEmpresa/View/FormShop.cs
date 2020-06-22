@@ -292,6 +292,13 @@ namespace proyectoEmpresa.View
             lbTime.Text = DateTime.Now.ToLongTimeString();
         }
 
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            FormLog fLog = new FormLog();
+            fLog.Show();
+            this.Close();
+        }
+
 
         /*
          * @JuanJo Método que creara la factura

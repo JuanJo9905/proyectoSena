@@ -65,6 +65,7 @@ namespace proyectoEmpresa
         {
             FormLog formLog = new FormLog();
             formLog.Show();
+            this.Close();
         }
     }
 }

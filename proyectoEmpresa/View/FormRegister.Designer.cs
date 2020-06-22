@@ -51,6 +51,7 @@
             this.cbTipeDoc = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -273,11 +274,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro";
             // 
+            // btExit
+            // 
+            this.btExit.AutoSize = true;
+            this.btExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(169)))), ((int)(((byte)(154)))));
+            this.btExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExit.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btExit.Location = new System.Drawing.Point(0, 417);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(83, 30);
+            this.btExit.TabIndex = 35;
+            this.btExit.Text = "Salir";
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
+            // 
             // FormRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btExit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Btn_register);
@@ -317,5 +334,6 @@
         private System.Windows.Forms.ComboBox cbTipeDoc;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btExit;
     }
 }

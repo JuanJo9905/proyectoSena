@@ -47,6 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btShowProducts = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -95,7 +96,7 @@
             this.btFact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(147)))), ((int)(((byte)(129)))));
             this.btFact.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btFact.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btFact.Location = new System.Drawing.Point(214, 382);
+            this.btFact.Location = new System.Drawing.Point(210, 382);
             this.btFact.Name = "btFact";
             this.btFact.Size = new System.Drawing.Size(117, 43);
             this.btFact.TabIndex = 28;
@@ -146,6 +147,7 @@
             // lbTime
             // 
             this.lbTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(190)))), ((int)(((byte)(179)))));
+            this.lbTime.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lbTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTime.Font = new System.Drawing.Font("MV Boli", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(87)))), ((int)(((byte)(70)))));
@@ -162,6 +164,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(669, 2);
             this.pictureBox2.Name = "pictureBox2";
@@ -206,6 +209,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 11);
@@ -238,11 +242,26 @@
             this.pictureBox3.TabIndex = 36;
             this.pictureBox3.TabStop = false;
             // 
+            // btCancel
+            // 
+            this.btCancel.AutoSize = true;
+            this.btCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(154)))), ((int)(((byte)(146)))));
+            this.btCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btCancel.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCancel.Location = new System.Drawing.Point(32, 382);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(117, 43);
+            this.btCancel.TabIndex = 37;
+            this.btCancel.Text = "Cancelar";
+            this.btCancel.UseVisualStyleBackColor = false;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
+            // 
             // FormShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btShowProducts);
             this.Controls.Add(this.cbSelectCategory);
             this.Controls.Add(this.pictureBox2);
@@ -259,6 +278,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lbDate);
             this.Controls.Add(this.lbIdUser);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "FormShop";
             this.Text = "FormShop";
             this.Load += new System.EventHandler(this.FormShop_Load);
@@ -290,5 +310,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btShowProducts;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btCancel;
     }
 }

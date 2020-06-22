@@ -42,7 +42,7 @@ namespace proyectoEmpresa.View
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btBack = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +80,7 @@ namespace proyectoEmpresa.View
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.label1.Location = new System.Drawing.Point(61, 46);
+            this.label1.Location = new System.Drawing.Point(53, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 25);
             this.label1.TabIndex = 4;
@@ -90,7 +90,7 @@ namespace proyectoEmpresa.View
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.label2.Location = new System.Drawing.Point(61, 117);
+            this.label2.Location = new System.Drawing.Point(53, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 25);
             this.label2.TabIndex = 5;
@@ -98,11 +98,10 @@ namespace proyectoEmpresa.View
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(251)))));
-            this.label3.Location = new System.Drawing.Point(61, 199);
+            this.label3.Location = new System.Drawing.Point(53, 211);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 25);
+            this.label3.Size = new System.Drawing.Size(100, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Categoria";
             // 
@@ -119,7 +118,7 @@ namespace proyectoEmpresa.View
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(277, 239);
+            this.button1.Location = new System.Drawing.Point(300, 239);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 48);
             this.button1.TabIndex = 8;
@@ -157,20 +156,23 @@ namespace proyectoEmpresa.View
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // btBack
             // 
-            this.button2.Location = new System.Drawing.Point(721, 511);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Menú";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btBack.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBack.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBack.Location = new System.Drawing.Point(713, 507);
+            this.btBack.Name = "btBack";
+            this.btBack.Size = new System.Drawing.Size(83, 27);
+            this.btBack.TabIndex = 10;
+            this.btBack.Text = "Menú";
+            this.btBack.UseVisualStyleBackColor = false;
+            this.btBack.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormAddProduct
             // 
             this.ClientSize = new System.Drawing.Size(808, 546);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btBack);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormAddProduct";
@@ -197,7 +199,7 @@ namespace proyectoEmpresa.View
         {
             FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
             formMenuAdmin.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

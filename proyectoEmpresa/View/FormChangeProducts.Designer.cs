@@ -53,9 +53,9 @@
             this.btReturn = new System.Windows.Forms.Button();
             this.eProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbMenChan = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btHideMenu = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.gbChanges.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
@@ -93,6 +93,8 @@
             this.tbSearchProduct.Size = new System.Drawing.Size(118, 25);
             this.tbSearchProduct.TabIndex = 2;
             this.tbSearchProduct.Text = "Buscar Producto";
+            this.tbSearchProduct.Enter += new System.EventHandler(this.tbSearchProduct_Enter);
+            this.tbSearchProduct.Leave += new System.EventHandler(this.tbSearchProduct_Leave);
             // 
             // gbChanges
             // 
@@ -221,6 +223,8 @@
             this.tbFindId.Size = new System.Drawing.Size(100, 25);
             this.tbFindId.TabIndex = 6;
             this.tbFindId.Text = "ID";
+            this.tbFindId.Enter += new System.EventHandler(this.tbFindId_Enter);
+            this.tbFindId.Leave += new System.EventHandler(this.tbFindId_Leave);
             // 
             // btSendId
             // 
@@ -307,6 +311,14 @@
             this.gbMenChan.TabIndex = 15;
             this.gbMenChan.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label7.Location = new System.Drawing.Point(0, 2);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(233, 43);
+            this.label7.TabIndex = 12;
+            // 
             // btHideMenu
             // 
             this.btHideMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btHideMenu.BackgroundImage")));
@@ -329,14 +341,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label7.Location = new System.Drawing.Point(0, 2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(233, 43);
-            this.label7.TabIndex = 12;
             // 
             // label8
             // 

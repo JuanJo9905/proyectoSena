@@ -161,7 +161,7 @@ namespace proyectoEmpresa.View
         {
             FormMenuAdmin formMenuAdmin = new FormMenuAdmin();
             formMenuAdmin.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

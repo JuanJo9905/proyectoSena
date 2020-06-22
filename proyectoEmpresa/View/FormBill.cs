@@ -85,5 +85,19 @@ namespace proyectoEmpresa.View
         {
 
         }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            FormLog log = new FormLog();
+            log.Show();
+            this.Close();
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            FormShop shop = new FormShop();
+            shop.Show();
+            this.Close();
+        }
     }
 }
